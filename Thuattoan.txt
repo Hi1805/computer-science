@@ -1,0 +1,86 @@
+Thuật Toán 
+Tập câu lệnh ( hay chỉ thị ) xác định , có thứ tự nhằm giải bài toán đặt ra
+Ví Dụ : 
+Thuật Toán nấu cơm :
+1. Rửa nồi
+2. Đong và vo gạo
+3.Cắm điện , bật nút nguồn
+4.Chờ kiểm tra đến lúc cơmchín
+
+Thuật toán hoán vị : 2 số 
+b1 : a = a + b;
+b2 : b = a - b;
+b3 : a = a - b ;
+
+
+2 số sẽ sai ghi vượt ô nhớ , giả sử a + b vượt quá lượng ô nhớ
+
+Các lệnh chứa các biến , biểu thức độc lập thì có thể thay đổi thứ tự
+ví dụ : Tính độ lệch trung bình các giá trị của các phần từ nửa trước và 
+nửa sau trong mảng
+- có thể tính trung bình nửa trước hoặc nửa sau độc lập , nhưng phải tính trước khi tính độ lệch
+
+*Các tính chất của thuật toán
+- Tính đúng : thuật toán giải được bài toán đặt ra
+- Tính Dừng : Thuật toán phải dừng một số hữu hạn các bước
+- Tính xđ : Các bước của thuật toán phải rõ ràng , xđ . Với một giá trị đầu vào, nếu thực hiện 
+đúng theo các bước của thuật toán thì ta có 1 duy nhất 1 đầu ra
+Tính phổ quát : khi xd thuật toán phải giải cho 1 lớp các bài toán 
+( thí dụ gptb2 có thể giải cho bất kì ptb2 nào )
+
+- 1 bài toán có nhiều cách giải khác nhau , để so sánh giữa cách giải thì dưa trên độ phức tạp của thuật toán
+
+
+Độ phức tạp của thuật toán (algorithm complexity )
+- Độ phức tạp theo không gian : Số ô nhớ cần thiết để thuật toán có thể thực hiên được
+- Độ phức tạp theo thời gian : Thời gian thực hiện xong các lnehej và trả về kết quả từ lúc nhận dữ liệu vào.
+Thông thường khi nói đến độ phức tạp ta chỉ nói đến độ phức tạp theo thời gian
+lý hiệu độ phức tạp là T(n) và n là kích thức dữ liệu vào
+Nếu kích thucocws dữ liệu càng lớn thì thời gian thực hiện thuật để trả về kq xứ lý càng lơn(
+!!Không tỉ lệ thui đoạn con ận ) 
+
+*Các xác định độ phức tạp 
+Nguyên lý cộng : Cho thuật oán A được chia làm là A1 và A2. Đoạn con A1 có độ phức là T1(n) = f(n) , đoạn con
+A2 có độ phức tạp là T2(n) = g(n) . Khi đó độ phức tạp thuật toán là 
+T(n) = f(n) + g(n) = O(max(f(n),g(n)))
+
+vd : cho a gồm n số nguyên , Hãy sx mảng A và in mảng đã sx ra màn hình
+1. Sx : (n ^ 2 - n ) /2
+2 : in n
+vậy độ phức tạp :O(n^2)
+
+Nguyên lý nhân :
+Thuật toán A gồm f(n) lời gọi câu lệnh (hàm ) , trong đó mỗi lệnh có độ phức tạp là g(n) . Khi đó độ phức tạp của 
+thuật toán A là T(n) = O(f(n)*g(n))
+ví dụ : Cho dãy số A gồm n số , cần in số các phử nhỏ hơn A[i]
+for(int i  = 0 ; i < n ; i ++ ){
+	demnhohon(A[i]);
+}
+Ghi chú : nếu nhiều vòng lặp nhau thì lấy tich
+
+
+*GIẢ THIẾT COLLATZ(1937)
+- Nếu số đó chắn , bạn chia số đó cho 2
+nếu số đó là ẽ , nhân số đó vs 3 rồi cộng thêm 1
+
+n^3,
+N = 21 ; 64  ; 32 ; 16; 8 ; 4 ; 2 ; 1
+
+KHI SO SÁNH HAI THUẬT TOÁN THÌ TA BỎ QUA CÁC YẾU TỐ NHƯ :
+ -  ngôn ngữ lập trình 
+ -  yếu tố phần cứng
+ -  Kỹ thuật cài đặt thuật toán
+ -  Vào ra dữ liệu
+ -  Hệ điều hành 
+*tập Trung số các câu lệnh phải thực hiện để cho ra kết quả 
+
+
+*GIẢ SỬ CÓ 4 THUẬT TOÁN CÙNG GIẢI QUYẾT BÀI TOÁN VÀ CÓ ĐỘ PHỨC TẠP TƯƠNG ỨNG VS
+KÍCH THƯỚC DỮ LIỆU n lần lượt là : 100n , n^2, n^3/3,2^n
+Nếu có 1000s để giải quyết bài toán
+thì thuật toán 1 có thể giải n = 10;
+thuật toán 2 có thể giải n = 31;
+thuật toán 3 có thể giải n = 12;
+thuật 4 có thể giải n = 9;
+
+BẰNG CÁCH THEO DÕI ĐỘ TĂNG CỦA HÀM , TA BIẾT ĐƯỢC KÍCH THƯỚC BÀI TOÁN TỐI ĐA CÓ THỂ GIẢI
